@@ -13,3 +13,4 @@ fi
 
 chmod 600 "$MY_DP/.netrc"
 youtube-dl "$1" --proxy "" --format best --netrc --all-subs --force-ipv4 --xattrs
+
