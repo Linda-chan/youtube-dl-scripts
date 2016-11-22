@@ -1,11 +1,13 @@
 @SETLOCAL
-@SET HOME=%~d0%~p0
-@SET PATH=%HOME%ffmpeg\bin;%PATH%
 
 @IF "%~1"=="" (
   @ECHO Usage: %~n0%~x0 video-or-playlist-url
   @GOTO :EOF
 )
+
+:: Set HOME to script's dir and PATH to ffmpeg in script's dir...
+@SET HOME=%~d0%~p0
+@SET PATH=%HOME%ffmpeg\bin;%PATH%
 
 :: Main options...
 @SET PARAMS=%PARAMS% --netrc
