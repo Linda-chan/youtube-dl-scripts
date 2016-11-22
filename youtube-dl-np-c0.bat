@@ -24,10 +24,6 @@
 @SET PARAMS=%PARAMS% --write-thumbnail
 @SET PARAMS=%PARAMS% --embed-thumbnail
 
-:: Test options...
-::@SET PARAMS=%PARAMS% --dump-user-agent
-::@SET PARAMS=%PARAMS% --include-ads
-
 :: Rare options...
 ::@SET PARAMS=%PARAMS% --write-description
 ::@SET PARAMS=%PARAMS% --write-info-json
