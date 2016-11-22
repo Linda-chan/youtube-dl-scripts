@@ -32,9 +32,9 @@ PARAMS=$PARAMS" --embed-thumbnail"
 PARAMS=$PARAMS" --ignore-errors"
 
 # Rare options...
-#PARAMS=$PARAMS --write-description
-#PARAMS=$PARAMS --write-info-json
-#PARAMS=$PARAMS --write-annotations
+#PARAMS=$PARAMS" --write-description"
+#PARAMS=$PARAMS" --write-info-json"
+#PARAMS=$PARAMS" --write-annotations"
 
 # Change rights on .netrc file for youtube-dl pleasure...
 chmod 600 "$MY_DP/.netrc"
