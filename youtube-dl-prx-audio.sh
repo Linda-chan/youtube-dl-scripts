@@ -40,4 +40,4 @@ PARAMS=$PARAMS" --ignore-errors"
 chmod 600 "$MY_DP/.netrc"
 
 # Call main program...
-youtube-dl "$1" --format best --extract-audio $PARAMS
+youtube-dl "$1" --format bestaudio/best --extract-audio $PARAMS

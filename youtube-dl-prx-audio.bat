@@ -34,4 +34,4 @@
 ::@SET PARAMS=%PARAMS% --write-annotations
 
 :: Call main program in script's directory...
-@"%~d0%~p0youtube-dl.exe" "%~1" --format best --extract-audio %PARAMS%
+@"%~d0%~p0youtube-dl.exe" "%~1" --format bestaudio/best --extract-audio %PARAMS%
