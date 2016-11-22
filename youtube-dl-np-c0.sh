@@ -14,22 +14,22 @@ MY_DP=$( dirname "$MY_RP" )
 HOME=$MY_DP
 
 # Main options...
-PARAMS=$PARAMS --netrc
-PARAMS=$PARAMS --force-ipv4
-PARAMS=$PARAMS --buffer-size 2097152
+PARAMS=$PARAMS" --netrc"
+PARAMS=$PARAMS" --force-ipv4"
+PARAMS=$PARAMS" --buffer-size 2097152"
 
 # Fanservice options...
-PARAMS=$PARAMS --xattrs
-PARAMS=$PARAMS --add-metadata
+PARAMS=$PARAMS" --xattrs"
+PARAMS=$PARAMS" --add-metadata"
 
-PARAMS=$PARAMS --all-subs
-PARAMS=$PARAMS --embed-subs
+PARAMS=$PARAMS" --all-subs"
+PARAMS=$PARAMS" --embed-subs"
 
-PARAMS=$PARAMS --write-thumbnail
-PARAMS=$PARAMS --embed-thumbnail
+PARAMS=$PARAMS" --write-thumbnail"
+PARAMS=$PARAMS" --embed-thumbnail"
 
 # Don't stop if program is unable to import thumbnail...
-PARAMS=$PARAMS --ignore-errors
+PARAMS=$PARAMS" --ignore-errors"
 
 # Rare options...
 #PARAMS=$PARAMS --write-description
