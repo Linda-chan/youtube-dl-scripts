@@ -6,7 +6,7 @@
 
 - Windows версия ищет файл youtube-dl.exe в каталоге с BAT файлом, в то время как Linux версия считает, что youtube-dl установлен где-то в системе.
 
-- Windows версия ищет [ffmpeg](https://ffmpeg.zeranoe.com/builds/win32/static/) в каталоге с BAT файлом (точнее, «ffmpeg\bin»), в то время как Linux версия считает, что youtube-dl установлен где-то в системе.
+- Windows версия ищет [ffmpeg](https://ffmpeg.zeranoe.com/builds/win32/static/) в каталоге с BAT файлом (точнее, «ffmpeg\bin»), в то время как Linux версия считает, что ffmpeg установлен где-то в системе.
 
 При запуске скрипта переменная HOME переписывается каталогом скрипта. Таким образом файл [.netrc](https://github.com/rg3/youtube-dl#authentication-with-netrc-file) (с логинами и паролями) берётся из каталога скрипта. То же относится и к каталогу .cache, который создаётся при скачке видео с YouTube.
 
