@@ -2,7 +2,7 @@
 
 # Show usage if no URLs provided...
 if [ -z "$1" ] ; then
-  echo Usage: $0 video-or-playlist-url
+  echo Usage: $0 video-or-playlist-url [video-or-playlist-url [...]]
   exit
 fi
 
@@ -40,4 +40,4 @@ PARAMS=$PARAMS" --ignore-errors"
 chmod 600 "$MY_DP/.netrc"
 
 # Call main program...
-youtube-dl "$1" --format bestaudio/best --extract-audio $PARAMS
+youtube-dl --format bestaudio/best --extract-audio $PARAMS "$@"

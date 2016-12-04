@@ -2,7 +2,7 @@
 
 :: Show usage if no URLs provided...
 @IF "%~1"=="" (
-  @ECHO Usage: %~n0%~x0 video-or-playlist-url
+  @ECHO Usage: %~n0%~x0 video-or-playlist-url [video-or-playlist-url [...]]
   @GOTO :EOF
 )
 

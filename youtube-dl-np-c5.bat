@@ -2,7 +2,7 @@
 
 :: Show usage if no URLs provided...
 @IF "%~1"=="" (
-  @ECHO Usage: %~n0%~x0 video-or-playlist-url
+  @ECHO Usage: %~n0%~x0 video-or-playlist-url [video-or-playlist-url [...]]
   @GOTO :EOF
 )
 
@@ -34,4 +34,4 @@
 ::@SET PARAMS=%PARAMS% --write-annotations
 
 :: Call main program in script's directory...
-@"%~d0%~p0youtube-dl.exe" "%~1" --proxy "" --format webm %PARAMS%
+@"%~d0%~p0youtube-dl.exe" --proxy "" --format webm %PARAMS% %*
