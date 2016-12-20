@@ -6,9 +6,16 @@
   @GOTO :EOF
 )
 
-:: Set HOME to script's dir and PATH to ffmpeg in script's dir...
+:: Set HOME to script's dir...
 @SET HOME=%~d0%~p0
-@SET PATH=%HOME%ffmpeg\bin;%PATH%
+
+:: Set PATH to ffmpeg and AtomicParsley subfolders if they are present 
+:: and there are ffmpeg.exe and AtomicParsley.exe there...
+@SET TEST_PATH=%HOME%ffmpeg\bin
+@IF EXIST "%TEST_PATH%\ffmpeg.exe" SET PATH=%TEST_PATH%;%PATH%
+
+@SET TEST_PATH=%HOME%AtomicParsley
+@IF EXIST "%TEST_PATH%\AtomicParsley.exe" SET PATH=%TEST_PATH%;%PATH%
 
 :: Main options...
 @SET PARAMS=%PARAMS% --netrc
