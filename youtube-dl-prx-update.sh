@@ -11,4 +11,4 @@ HOME=$MY_DP
 sudo youtube-dl -U
 
 # Generate usage in text file...
-youtube-dl --help > $HOME"/youtube-dl.txt"
+youtube-dl --help > $MY_DP"/youtube-dl.txt"

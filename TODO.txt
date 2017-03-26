@@ -1,0 +1,49 @@
+﻿    --dump-user-agent                Display the current browser identification
+    --list-extractors                List all supported extractors
+    --extractor-descriptions         Output descriptions of all supported
+
+                                     extractors
+    --config-location PATH           Location of the configuration file; either
+                                     the path to the config or its containing
+                                     directory.
+    --flat-playlist                  Do not extract the videos of a playlist,
+    --socket-timeout SECONDS         Time to wait before giving up, in seconds
+    --include-ads                    Download advertisements as well
+                                     (experimental)
+    --xattr-set-filesize             Set file xattribute ytdl.filesize with
+                                     expected file size (experimental)
+    -a, --batch-file FILE            File containing URLs to download ('-' for
+                                     stdin)
+    --cache-dir DIR                  Location in the filesystem where youtube-dl
+                                     can store some downloaded information
+                                     permanently. By default $XDG_CACHE_HOME
+                                     /youtube-dl or ~/.cache/youtube-dl . At the
+                                     moment, only YouTube player files (for
+                                     videos with obfuscated signatures) are
+                                     cached, but that may change.
+    --no-cache-dir                   Disable filesystem caching
+    --rm-cache-dir                   Delete all filesystem cache files
+
+    --write-thumbnail                Write thumbnail image to disk
+    --write-all-thumbnails           Write all thumbnail image formats to disk
+    --list-thumbnails                Simulate and list all available thumbnail
+                                     formats
+
+    --console-title                  Display progress in console titlebar
+    --print-traffic                  Display sent and read HTTP traffic
+    --sleep-interval SECONDS         Number of seconds to sleep before each
+                                     download when used alone or a lower bound
+                                     of a range for randomized sleep before each
+                                     download (minimum possible number of
+                                     seconds to sleep) when used along with
+                                     --max-sleep-interval.
+    --max-sleep-interval SECONDS     Upper bound of a range for randomized sleep
+                                     before each download (maximum possible
+                                     number of seconds to sleep). Must only be
+                                     used along with --min-sleep-interval.
+    -F, --list-formats               List all available formats of requested
+                                     videos
+    --list-subs                      List all available subtitles for the video
+    --ffmpeg-location PATH           Location of the ffmpeg/avconv binary;
+                                     either the path to the binary or its
+                                     containing directory.
