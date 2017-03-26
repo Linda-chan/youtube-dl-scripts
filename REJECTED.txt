@@ -2,3 +2,15 @@
                                      expected file size (experimental)
     --include-ads                    Download advertisements as well
                                      (experimental)
+    --ffmpeg-location PATH           Location of the ffmpeg/avconv binary;
+                                     either the path to the binary or its
+                                     containing directory.
+    --cache-dir DIR                  Location in the filesystem where youtube-dl
+                                     can store some downloaded information
+                                     permanently. By default $XDG_CACHE_HOME
+                                     /youtube-dl or ~/.cache/youtube-dl . At the
+                                     moment, only YouTube player files (for
+                                     videos with obfuscated signatures) are
+                                     cached, but that may change.
+    --no-cache-dir                   Disable filesystem caching
+    --rm-cache-dir                   Delete all filesystem cache files
