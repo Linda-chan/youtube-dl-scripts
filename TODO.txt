@@ -1,9 +1,4 @@
-﻿    --dump-user-agent                Display the current browser identification
-    --list-extractors                List all supported extractors
-    --extractor-descriptions         Output descriptions of all supported
-
-                                     extractors
-    --config-location PATH           Location of the configuration file; either
+﻿    --config-location PATH           Location of the configuration file; either
                                      the path to the config or its containing
                                      directory.
     --flat-playlist                  Do not extract the videos of a playlist,
