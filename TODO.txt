@@ -1,6 +1,3 @@
 ﻿    --flat-playlist                  Do not extract the videos of a playlist,
     -a, --batch-file FILE            File containing URLs to download ('-' for
                                      stdin)
-
-    -F, --list-formats               List all available formats of requested
-                                     videos
