@@ -24,3 +24,6 @@
 @ECHO. >> "%FILE_NAME%"
 @"%~d0%~p0youtube-dl.exe" --extractor-descriptions >> "%FILE_NAME%"
 @ECHO. >> "%FILE_NAME%"
+
+:: All done!
+echo Info was saved to %FILE_NAME%

@@ -28,3 +28,6 @@ echo "===[ Extractor descriptions ]========================================" >> 
 echo "" >> "$FILE_NAME"
 youtube-dl --extractor-descriptions >> "$FILE_NAME"
 echo "" >> "$FILE_NAME"
+
+# All done!
+echo "Info was saved to $FILE_NAME"
