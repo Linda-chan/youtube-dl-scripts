@@ -28,6 +28,8 @@ PARAMS=$PARAMS" --embed-subs"
 PARAMS=$PARAMS" --write-thumbnail"
 PARAMS=$PARAMS" --embed-thumbnail"
 
+PARAMS=$PARAMS" --console-title"
+
 # Don't stop if program is unable to import thumbnail...
 PARAMS=$PARAMS" --ignore-errors"
 

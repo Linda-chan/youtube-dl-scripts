@@ -32,6 +32,8 @@
 @SET PARAMS=%PARAMS% --write-thumbnail
 @SET PARAMS=%PARAMS% --embed-thumbnail
 
+@SET PARAMS=%PARAMS% --console-title
+
 :: Don't stop if program is unable to import thumbnail...
 @SET PARAMS=%PARAMS% --ignore-errors
 
