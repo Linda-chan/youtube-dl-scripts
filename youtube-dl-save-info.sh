@@ -31,4 +31,4 @@ youtube-dl --extractor-descriptions >> "$FILE_NAME"
 echo "" >> "$FILE_NAME"
 
 # All done!
-echo "Info was saved to $FILE_NAME"
+echo "Info was saved to "$FILE_NAME
