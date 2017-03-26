@@ -35,6 +35,9 @@
 :: Don't stop if program is unable to import thumbnail...
 @SET PARAMS=%PARAMS% --ignore-errors
 
+:: Set timeout to 180 sec...
+@SET PARAMS=%PARAMS% --socket-timeout 180
+
 :: Rare options...
 ::@SET PARAMS=%PARAMS% --write-description
 ::@SET PARAMS=%PARAMS% --write-info-json

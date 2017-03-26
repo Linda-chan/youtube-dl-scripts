@@ -31,6 +31,9 @@ PARAMS=$PARAMS" --embed-thumbnail"
 # Don't stop if program is unable to import thumbnail...
 PARAMS=$PARAMS" --ignore-errors"
 
+# Set timeout to 180 sec...
+PARAMS=$PARAMS" --socket-timeout 180"
+
 # Rare options...
 #PARAMS=$PARAMS" --write-description"
 #PARAMS=$PARAMS" --write-info-json"

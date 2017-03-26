@@ -2,7 +2,6 @@
                                      the path to the config or its containing
                                      directory.
     --flat-playlist                  Do not extract the videos of a playlist,
-    --socket-timeout SECONDS         Time to wait before giving up, in seconds
     --include-ads                    Download advertisements as well
                                      (experimental)
     --xattr-set-filesize             Set file xattribute ytdl.filesize with
