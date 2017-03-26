@@ -5,7 +5,8 @@ MY_RP=$( readlink -e "$0" )
 MY_DP=$( dirname "$MY_RP" )
 
 # Set HOME to script's directory...
-HOME=$MY_DP
+export HOME=$MY_DP
+export XDG_CACHE_HOME=$MY_DP
 
 # Call main program...
 sudo youtube-dl -U

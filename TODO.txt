@@ -2,8 +2,6 @@
                                      the path to the config or its containing
                                      directory.
     --flat-playlist                  Do not extract the videos of a playlist,
-    --include-ads                    Download advertisements as well
-                                     (experimental)
     -a, --batch-file FILE            File containing URLs to download ('-' for
                                      stdin)
     --cache-dir DIR                  Location in the filesystem where youtube-dl

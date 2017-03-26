@@ -2,6 +2,7 @@
 
 :: Set HOME to script's dir...
 @SET HOME=%~d0%~p0
+@SET XDG_CACHE_HOME=%~d0%~p0
 
 :: Delete temporary file...
 @IF EXIST "%~d0%~p0youtube-dl.exe.new" DEL "%~d0%~p0youtube-dl.exe.new"
