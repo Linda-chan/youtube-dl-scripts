@@ -14,3 +14,6 @@
                                      cached, but that may change.
     --no-cache-dir                   Disable filesystem caching
     --rm-cache-dir                   Delete all filesystem cache files
+    --config-location PATH           Location of the configuration file; either
+                                     the path to the config or its containing
+                                     directory.

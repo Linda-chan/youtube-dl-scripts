@@ -1,7 +1,4 @@
-﻿    --config-location PATH           Location of the configuration file; either
-                                     the path to the config or its containing
-                                     directory.
-    --flat-playlist                  Do not extract the videos of a playlist,
+﻿    --flat-playlist                  Do not extract the videos of a playlist,
     -a, --batch-file FILE            File containing URLs to download ('-' for
                                      stdin)
 
