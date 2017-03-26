@@ -4,8 +4,6 @@
     --flat-playlist                  Do not extract the videos of a playlist,
     --include-ads                    Download advertisements as well
                                      (experimental)
-    --xattr-set-filesize             Set file xattribute ytdl.filesize with
-                                     expected file size (experimental)
     -a, --batch-file FILE            File containing URLs to download ('-' for
                                      stdin)
     --cache-dir DIR                  Location in the filesystem where youtube-dl

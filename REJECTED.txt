@@ -1,0 +1,2 @@
+﻿    --xattr-set-filesize             Set file xattribute ytdl.filesize with
+                                     expected file size (experimental)
