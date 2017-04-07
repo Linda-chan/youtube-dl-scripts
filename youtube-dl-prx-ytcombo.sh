@@ -12,7 +12,7 @@ MY_DP=$( dirname "$MY_RP" )
 
 # Set HOME to script's directory...
 export HOME=$MY_DP
-export XDG_CACHE_HOME=$MY_DP
+export XDG_CACHE_HOME=$MY_DP/.cache
 
 # Call other BAT files in script's directory...
 "$MY_DP/youtube-dl-prx-c9.sh" "$@"

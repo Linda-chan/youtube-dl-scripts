@@ -8,7 +8,7 @@
 
 :: Set HOME to script's dir...
 @SET HOME=%~d0%~p0
-@SET XDG_CACHE_HOME=%~d0%~p0
+@SET XDG_CACHE_HOME=%~d0%~p0\.cache
 
 :: Set PATH to ffmpeg and AtomicParsley subfolders if they are present 
 :: and there are ffmpeg.exe and AtomicParsley.exe there...

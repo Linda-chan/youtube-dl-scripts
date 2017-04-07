@@ -2,7 +2,7 @@
 
 :: Set HOME to script's dir...
 @SET HOME=%~d0%~p0
-@SET XDG_CACHE_HOME=%~d0%~p0
+@SET XDG_CACHE_HOME=%~d0%~p0\.cache
 
 :: Set text file name for easy access...
 @SET FILE_NAME=%~d0%~p0youtube-dl-info.txt

@@ -6,7 +6,7 @@ MY_DP=$( dirname "$MY_RP" )
 
 # Set HOME to script's directory...
 export HOME=$MY_DP
-export XDG_CACHE_HOME=$MY_DP
+export XDG_CACHE_HOME=$MY_DP/.cache
 
 # Set text file name for easy access...
 FILE_NAME=$MY_DP"/youtube-dl-info.txt"
