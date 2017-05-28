@@ -43,10 +43,14 @@
 :: Set timeout to 180 sec...
 @SET PARAMS=%PARAMS% --socket-timeout 180
 
+:: Mark YouTube videos as watched...
+@SET PARAMS=%PARAMS% --mark-watched
+
 :: Rare options...
 ::@SET PARAMS=%PARAMS% --write-description
 ::@SET PARAMS=%PARAMS% --write-info-json
 ::@SET PARAMS=%PARAMS% --write-annotations
+::@SET PARAMS=%PARAMS% --write-auto-sub
 
 :: Call main program in script's directory...
 @"%~d0%~p0youtube-dl.exe" %PARAMS% --format %*

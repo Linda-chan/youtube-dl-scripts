@@ -39,10 +39,14 @@ PARAMS=$PARAMS" --ignore-errors"
 # Set timeout to 180 sec...
 PARAMS=$PARAMS" --socket-timeout 180"
 
+# Mark YouTube videos as watched...
+PARAMS=$PARAMS" --mark-watched"
+
 # Rare options...
 #PARAMS=$PARAMS" --write-description"
 #PARAMS=$PARAMS" --write-info-json"
 #PARAMS=$PARAMS" --write-annotations"
+#PARAMS=$PARAMS" --write-auto-sub"
 
 # Change rights on .netrc file for youtube-dl pleasure...
 chmod 600 "$MY_DP/.netrc"
