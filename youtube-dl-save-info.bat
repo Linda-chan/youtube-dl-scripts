@@ -27,4 +27,4 @@
 @ECHO. >> "%FILE_NAME%"
 
 :: All done!
-echo Info was saved to %FILE_NAME%
+@ECHO Info was saved to: %FILE_NAME%
