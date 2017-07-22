@@ -5,6 +5,8 @@
 # at least two parameters: format and URL.
 if [ -z "$2" ] ; then
   echo "Usage: $0 format-code video-or-playlist-url [video-or-playlist-url [...]]"
+  echo "       $0 format-code -a list-file-name"
+  echo "       $0 format-code --batch-file list-file-name"
   exit
 fi
 

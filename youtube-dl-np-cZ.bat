@@ -5,6 +5,8 @@
 :: at least two parameters: format and URL.
 @IF "%~2"=="" (
   @ECHO Usage: %~n0%~x0 format-code video-or-playlist-url [video-or-playlist-url [...]]
+  @ECHO        %~n0%~x0 format-code -a list-file-name
+  @ECHO        %~n0%~x0 format-code --batch-file list-file-name
   @GOTO :EOF
 )
 
