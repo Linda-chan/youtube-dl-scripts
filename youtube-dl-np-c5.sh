@@ -44,7 +44,7 @@ PARAMS=$PARAMS" --mark-watched"
 
 # Custom config file in script's directory...
 if [ -e "$MY_DP/youtube-dl.cfg" ] ; then
-  PARAMS=$PARAMS --config-location "$MY_DP/youtube-dl.cfg"
+  PARAMS=$PARAMS --config-location" \"$MY_DP/youtube-dl.cfg\""
 fi
 
 # Rare options...
