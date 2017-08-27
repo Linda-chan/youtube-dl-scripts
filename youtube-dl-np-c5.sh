@@ -43,9 +43,14 @@ PARAMS=$PARAMS" --socket-timeout 180"
 PARAMS=$PARAMS" --mark-watched"
 
 # Custom config file in script's directory...
-if [ -e "$MY_DP/youtube-dl.cfg" ] ; then
-  PARAMS=$PARAMS --config-location" $MY_DP/youtube-dl.cfg"
-fi
+# This doesn't work in Bash. Variable gets double quotes around file 
+# name but youtube-dl says the file doesn't exist. Looks like 
+# youtube-dl treat double quotes as part of file name. If we send 
+# double quotes directly to outube-dl call, they will work well. 
+# Don't know why...
+#if [ -e "$MY_DP/youtube-dl.cfg" ] ; then
+#  PARAMS=$PARAMS" --config-location "'"'"$MY_DP/youtube-dl.cfg"'"'
+#fi
 
 # Rare options...
 #PARAMS=$PARAMS" --write-description"
