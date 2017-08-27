@@ -46,6 +46,11 @@
 :: Mark YouTube videos as watched...
 @SET PARAMS=%PARAMS% --mark-watched
 
+:: Custom config file in script's directory...
+@IF EXIST "%~d0%~p0youtube-dl.cfg" (
+  @SET PARAMS=%PARAMS% --config-location "%~d0%~p0youtube-dl.cfg"
+)
+
 :: Rare options...
 ::@SET PARAMS=%PARAMS% --write-description
 ::@SET PARAMS=%PARAMS% --write-info-json
