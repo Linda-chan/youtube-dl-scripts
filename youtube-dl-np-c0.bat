@@ -21,7 +21,6 @@
 @IF EXIST "%TEST_PATH%\AtomicParsley.exe" SET PATH=%TEST_PATH%;%PATH%
 
 :: Main options...
-@SET PARAMS=%PARAMS% --netrc
 @SET PARAMS=%PARAMS% --force-ipv4
 @SET PARAMS=%PARAMS% --buffer-size 2097152
 
@@ -56,6 +55,11 @@
 ::@SET PARAMS=%PARAMS% --write-info-json
 ::@SET PARAMS=%PARAMS% --write-annotations
 ::@SET PARAMS=%PARAMS% --write-auto-sub
+
+:: Add support for .netrc file only if it exist.
+@IF EXIST "%~d0%~p0.netrc" (
+  @SET PARAMS=%PARAMS% --netrc
+)
 
 :: Call main program in script's directory...
 @"%~d0%~p0youtube-dl.exe" --proxy "" --format best %PARAMS% %*
