@@ -62,4 +62,4 @@
 )
 
 :: Call main program in script's directory...
-@"%~d0%~p0youtube-dl.exe" --format webm %PARAMS% %*
+@"%~d0%~p0youtube-dl.exe" --format best[height^<=360] %PARAMS% %*

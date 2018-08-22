@@ -62,4 +62,4 @@
 )
 
 :: Call main program in script's directory...
-@"%~d0%~p0youtube-dl.exe" --proxy "" --format webm %PARAMS% %*
+@"%~d0%~p0youtube-dl.exe" --proxy "" --format best[height^<=360] %PARAMS% %*

@@ -61,7 +61,7 @@ fi
 # I call youtube-dl binary for some reason it get this path without 
 # quotes =_= So I give up =_=
 if [[ -e "$MY_DP/youtube-dl.cfg" ]] ; then
-  youtube-dl --format webm $PARAMS --config-location "$MY_DP/youtube-dl.cfg" "$@"
+  youtube-dl --format best\[height\<=360\] $PARAMS --config-location "$MY_DP/youtube-dl.cfg" "$@"
 else
-  youtube-dl --format webm $PARAMS "$@"
+  youtube-dl --format best\[height\<=360\] $PARAMS "$@"
 fi
