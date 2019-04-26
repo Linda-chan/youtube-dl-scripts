@@ -1,9 +1,12 @@
 # My entries...
 Backups/
 Test/
+Misc/
+Rejected/
 
 # Service files...
 git*.sh
+curl-ca-bundle.crt
 
 # Windows image file caches
 Thumbs.db
@@ -15,3 +18,10 @@ Desktop.ini
 
 # Windows shortcuts
 *.lnk
+
+# Backups...
+nppBackup/
+*.BAK
+*.BAK??
+*.bak
+*.bak??
