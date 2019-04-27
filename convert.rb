@@ -1,4 +1,4 @@
-﻿#/bin/ruby -w
+#/bin/ruby -w
 
 # https://www.sitepoint.com/markdown-processing-ruby/
 # https://github.com/github/markup
@@ -10,7 +10,7 @@
 require "github/markup"
 #require "kramdown"
 
-MD_FILE_NAME = "README.md"
+MD_FILE_NAME = "../youtube-dl Scripts/README.md"
 TPL_FILE_NAME = "index.tpl"
 
 md_text = File.read(MD_FILE_NAME)
