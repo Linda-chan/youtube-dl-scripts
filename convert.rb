@@ -16,6 +16,9 @@ TPL_FILE_NAME = "index.tpl"
 md_text = File.read(MD_FILE_NAME)
 template_text = File.read(TPL_FILE_NAME)
 
+# Срезаем UTF-8 BOM...
+md_text = md_text[3, md_text.length - 3]
+
 html_text = GitHub::Markup.render(MD_FILE_NAME, md_text)
 #html_text = Kramdown::Document.new(md_text).to_html
 
