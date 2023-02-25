@@ -8,6 +8,17 @@
                                 OS caches the URL based on the file path
 --write-webloc-link             Write a .webloc macOS internet shortcut
 --write-desktop-link            Write a .desktop Linux internet shortcut
+--embed-info-json               Embed the infojson as an attachment to
+                                mkv/mka video files
+--write-all-thumbnails          Write all thumbnail image formats to disk
+--write-pages                   Write downloaded intermediary pages to files
+                                in the current directory to debug problems
 
-yt-dlp
-ytdl-patched
+===[ Auto subs ]===
+
+:: Instead of --all-subs from youtube-dl: download all subs except 
+:: live chat which leads to errors and unintiresting anyway...
+::@SET PARAMS=%PARAMS% --sub-langs=all,-live_chat
+@SET PARAMS=%PARAMS% --sub-langs=en,eo,ja-orig,ja,ru,-live_chat
+@SET PARAMS=%PARAMS% --write-auto-subs
+@SET PARAMS=%PARAMS% --embed-subs
