@@ -21,6 +21,9 @@
       }
       pre {
         margin-left:20px;
+        -border:1px solid #c0c0c0;
+        -border-left:5px solid #c0c0c0;
+        padding:10px 14px;
       }
       img {
         border:none;
