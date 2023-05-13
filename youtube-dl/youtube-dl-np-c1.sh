@@ -2,7 +2,7 @@
 
 # Show usage if no URLs provided...
 if [ -z "$1" ] ; then
-  echo "Usage: $0 video-or-playlist-url [video-or-playlist-url [...]]"
+  echo "Usage: $0 video-or-playlist-url [...]"
   echo "       $0 -a list-file-name"
   echo "       $0 --batch-file list-file-name"
   exit
