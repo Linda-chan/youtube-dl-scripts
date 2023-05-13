@@ -2,15 +2,15 @@
 
 :: Show usage if no URLs provided...
 @IF "%~1"=="" (
-  @ECHO Usage: %~n0%~x0 video-or-playlist-url [...]
-  @ECHO        %~n0%~x0 -a list-file-name
-  @ECHO        %~n0%~x0 --batch-file list-file-name
+  @ECHO Usage: %~nx0 video-or-playlist-url [...]
+  @ECHO        %~nx0 -a list-file-name
+  @ECHO        %~nx0 --batch-file list-file-name
   @GOTO :EOF
 )
 
 :: Set HOME to script's dir...
-@SET HOME=%~d0%~p0
-@SET XDG_CACHE_HOME=%~d0%~p0\.cache
+@SET HOME=%~dp0
+@SET XDG_CACHE_HOME=%~dp0\.cache
 
 :: Set PATH to ffmpeg and AtomicParsley subfolders if they are present 
 :: and there are ffmpeg.exe and AtomicParsley.exe there...
@@ -46,8 +46,8 @@
 @SET PARAMS=%PARAMS% --mark-watched
 
 :: Custom config file in script's directory...
-@IF EXIST "%~d0%~p0youtube-dl.cfg" (
-  @SET PARAMS=%PARAMS% --config-location "%~d0%~p0youtube-dl.cfg"
+@IF EXIST "%~dp0youtube-dl.cfg" (
+  @SET PARAMS=%PARAMS% --config-location "%~dp0youtube-dl.cfg"
 )
 
 :: Rare options...
@@ -57,14 +57,14 @@
 ::@SET PARAMS=%PARAMS% --write-auto-sub
 
 :: Add support for .netrc file only if it exist.
-@IF EXIST "%~d0%~p0.netrc" (
+@IF EXIST "%~dp0.netrc" (
   @SET PARAMS=%PARAMS% --netrc
 )
 
 :: Add support for cookies.txt file only if it exist.
-@IF EXIST "%~d0%~p0cookies.txt" (
-  @SET PARAMS=%PARAMS% --cookies "%~d0%~p0cookies.txt"
+@IF EXIST "%~dp0cookies.txt" (
+  @SET PARAMS=%PARAMS% --cookies "%~dp0cookies.txt"
 )
 
 :: Call main program in script's directory...
-@"%~d0%~p0youtube-dl.exe" --list-formats %PARAMS% %*
+@"%~dp0youtube-dl.exe" --list-formats %PARAMS% %*

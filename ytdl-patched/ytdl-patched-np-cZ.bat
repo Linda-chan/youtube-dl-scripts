@@ -4,15 +4,15 @@
 :: Please note we check second parameter because script must have 
 :: at least two parameters: format and URL.
 @IF "%~2"=="" (
-  @ECHO Usage: %~n0%~x0 format-code video-or-playlist-url [...]
-  @ECHO        %~n0%~x0 format-code -a list-file-name
-  @ECHO        %~n0%~x0 format-code --batch-file list-file-name
+  @ECHO Usage: %~nx0 format-code video-or-playlist-url [...]
+  @ECHO        %~nx0 format-code -a list-file-name
+  @ECHO        %~nx0 format-code --batch-file list-file-name
   @GOTO :EOF
 )
 
 :: Set HOME to script's dir...
-@SET HOME=%~d0%~p0
-@SET XDG_CACHE_HOME=%~d0%~p0\.cache
+@SET HOME=%~dp0
+@SET XDG_CACHE_HOME=%~dp0\.cache
 
 :: Set PATH to ffmpeg and AtomicParsley subfolders if they are present 
 :: and there are ffmpeg.exe and AtomicParsley.exe there...
@@ -51,8 +51,8 @@
 @SET PARAMS=%PARAMS% --mark-watched
 
 :: Custom config file in script's directory...
-@IF EXIST "%~d0%~p0ytdl-patched.cfg" (
-  @SET PARAMS=%PARAMS% --config-location "%~d0%~p0ytdl-patched.cfg"
+@IF EXIST "%~dp0ytdl-patched.cfg" (
+  @SET PARAMS=%PARAMS% --config-location "%~dp0ytdl-patched.cfg"
 )
 
 :: Rare options...
@@ -62,14 +62,14 @@
 ::@SET PARAMS=%PARAMS% --write-auto-sub
 
 :: Add support for .netrc file only if it exist.
-@IF EXIST "%~d0%~p0.netrc" (
+@IF EXIST "%~dp0.netrc" (
   @SET PARAMS=%PARAMS% --netrc
 )
 
 :: Add support for cookies.txt file only if it exist.
-@IF EXIST "%~d0%~p0cookies.txt" (
-  @SET PARAMS=%PARAMS% --cookies "%~d0%~p0cookies.txt"
+@IF EXIST "%~dp0cookies.txt" (
+  @SET PARAMS=%PARAMS% --cookies "%~dp0cookies.txt"
 )
 
 :: Call main program in script's directory...
-@"%~d0%~p0ytdl-patched-red.exe" --proxy "" %PARAMS% --format %*
+@"%~dp0ytdl-patched-red.exe" --proxy "" %PARAMS% --format %*

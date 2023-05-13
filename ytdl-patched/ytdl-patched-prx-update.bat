@@ -1,19 +1,19 @@
 @SETLOCAL
 
 :: Set HOME to script's dir...
-@SET HOME=%~d0%~p0
-@SET XDG_CACHE_HOME=%~d0%~p0\.cache
+@SET HOME=%~dp0
+@SET XDG_CACHE_HOME=%~dp0\.cache
 
 :: Delete temporary file...
-@IF EXIST "%~d0%~p0ytdl-patched-red.exe.new" DEL "%~d0%~p0ytdl-patched-red.exe.new"
+@IF EXIST "%~dp0ytdl-patched-red.exe.new" DEL "%~dp0ytdl-patched-red.exe.new"
 
 :: Call main program in script's directory...
-@"%~d0%~p0ytdl-patched-red.exe" -U
+@"%~dp0ytdl-patched-red.exe" -U
 
 :: Check if temporary file is present. If so, new version was 
 :: downloaded but EXE file was not replaced due to some bug 
 :: in ytdl-patched. Replace it here...
-@IF EXIST "%~d0%~p0ytdl-patched-red.exe.new" MOVE /Y "%~d0%~p0ytdl-patched-red.exe.new" "%~d0%~p0ytdl-patched-red.exe"
+@IF EXIST "%~dp0ytdl-patched-red.exe.new" MOVE /Y "%~dp0ytdl-patched-red.exe.new" "%~dp0ytdl-patched-red.exe"
 
 :: Generate usage in text file...
-@"%~d0%~p0ytdl-patched-red.exe" --help > "%~d0%~p0ytdl-patched.txt"
+@"%~dp0ytdl-patched-red.exe" --help > "%~dp0ytdl-patched.txt"

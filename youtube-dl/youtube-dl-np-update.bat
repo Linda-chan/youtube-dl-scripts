@@ -1,19 +1,19 @@
 @SETLOCAL
 
 :: Set HOME to script's dir...
-@SET HOME=%~d0%~p0
-@SET XDG_CACHE_HOME=%~d0%~p0\.cache
+@SET HOME=%~dp0
+@SET XDG_CACHE_HOME=%~dp0\.cache
 
 :: Delete temporary file...
-@IF EXIST "%~d0%~p0youtube-dl.exe.new" DEL "%~d0%~p0youtube-dl.exe.new"
+@IF EXIST "%~dp0youtube-dl.exe.new" DEL "%~dp0youtube-dl.exe.new"
 
 :: Call main program in script's directory...
-@"%~d0%~p0youtube-dl.exe" --proxy "" -U
+@"%~dp0youtube-dl.exe" --proxy "" -U
 
 :: Check if temporary file is present. If so, new version was 
 :: downloaded but EXE file was not replaced due to some bug 
 :: in youtube-dl. Replace it here...
-@IF EXIST "%~d0%~p0youtube-dl.exe.new" MOVE /Y "%~d0%~p0youtube-dl.exe.new" "%~d0%~p0youtube-dl.exe"
+@IF EXIST "%~dp0youtube-dl.exe.new" MOVE /Y "%~dp0youtube-dl.exe.new" "%~dp0youtube-dl.exe"
 
 :: Generate usage in text file...
-@"%~d0%~p0youtube-dl.exe" --help > "%~d0%~p0youtube-dl.txt"
+@"%~dp0youtube-dl.exe" --help > "%~dp0youtube-dl.txt"
