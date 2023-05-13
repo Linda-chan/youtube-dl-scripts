@@ -9,11 +9,17 @@ if [ -z "$1" ] ; then
   exit
 fi
 
-# Figure out script's directory...
-MY_RP="$( readlink -e "$0" )"
-MY_DP="$( dirname "$MY_RP" )"
+# Figure out current directory...
+# We will use it where we need full path (like in HOME variable) and 
+# "./" in other places. That's because I can't figure out how 
+# to pass quoted filenames to variables which later I pass as param 
+# to binary. It never goes like in BAT version. So I give up =_=
+# By the way, for same reason I will use only safe file names =_=
+MY_DP="$( pwd )"
 
-# Set HOME to script's directory...
+# Set HOME to current directory. It will be handy in case of files 
+# like .netrc, which program will seek in home directory (newer 
+# versions have special parameter but old version doesn't)...
 export HOME="$MY_DP"
 export XDG_CACHE_HOME="$MY_DP/.cache"
 
@@ -45,6 +51,11 @@ PARAMS="$PARAMS --socket-timeout 180"
 # Mark YouTube videos as watched...
 PARAMS="$PARAMS --mark-watched"
 
+# Custom config file in current directory...
+if [[ -e "./ytdl-patched.cfg" ]] ; then
+  PARAMS="$PARAMS --config-location ./ytdl-patched.cfg"
+fi
+
 # Rare options...
 #PARAMS="$PARAMS --write-description"
 #PARAMS="$PARAMS --write-info-json"
@@ -54,18 +65,15 @@ PARAMS="$PARAMS --mark-watched"
 # Add support for .netrc file only if it exist. Also change rights 
 # on this file for yt-dlp pleasure... Both things will fight 
 # error messages.
-if [[ -e "$MY_DP/.netrc" ]] ; then
+if [[ -e "./.netrc" ]] ; then
   PARAMS="$PARAMS --netrc"
-  chmod 600 "$MY_DP/.netrc"
+  chmod 600 "./.netrc"
+fi
+
+# Add support for cookies.txt file only if it exist.
+if [[ -e "./cookies.txt" ]] ; then
+  PARAMS="$PARAMS --cookies ./cookies.txt"
 fi
 
 # Call main program...
-# Unlike BAT file version, check custom config file here. I was able 
-# to add full file path in PARAMS varianle with quotes but when 
-# I call yt-dlp binary for some reason it get this path without 
-# quotes =_= So I give up =_=
-if [[ -e "$MY_DP/yt-dlp.cfg" ]] ; then
-  yt-dlp --proxy "" --format worst $PARAMS --config-location "$MY_DP/yt-dlp.cfg" "$@"
-else
-  yt-dlp --proxy "" --format worst $PARAMS "$@"
-fi
+yt-dlp --proxy "" --format worst $PARAMS "$@"
