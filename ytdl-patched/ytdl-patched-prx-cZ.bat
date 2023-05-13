@@ -32,7 +32,7 @@
 @SET PARAMS=%PARAMS% --embed-chapters
 
 :: Instead of --all-subs from youtube-dl: download all subs except 
-:: live chat which leads to errors and unintiresting anyway...
+:: live chat which leads to errors and uninteresting anyway...
 @SET PARAMS=%PARAMS% --sub-langs=all,-live_chat
 @SET PARAMS=%PARAMS% --embed-subs
 
