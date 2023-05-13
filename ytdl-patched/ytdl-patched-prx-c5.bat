@@ -64,5 +64,10 @@
   @SET PARAMS=%PARAMS% --netrc
 )
 
+:: Add support for cookies.txt file only if it exist.
+@IF EXIST "%~d0%~p0cookies.txt" (
+  @SET PARAMS=%PARAMS% --cookies "%~d0%~p0cookies.txt"
+)
+
 :: Call main program in script's directory...
 @"%~d0%~p0ytdl-patched-red.exe" --format best[height^<=360] %PARAMS% %*
